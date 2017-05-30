@@ -1,8 +1,5 @@
 <?php
-
-namespace Framework\CustomPosts;
-
-use \Framework\CustomPosts\Cpt;
+namespace WpCustomPosts;
 
 class CustomTaxonomyBuilder
 {

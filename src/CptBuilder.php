@@ -1,10 +1,5 @@
 <?php
-
-namespace Framework\CustomPosts;
-
-use \Framework\CustomPosts\Cpt;
-use \Framework\CustomPosts\CptMeta;
-use \Framework\CustomPosts\CustomTaxonomyBuilder;
+namespace WpCustomPosts;
 
 class CptBuilder
 {

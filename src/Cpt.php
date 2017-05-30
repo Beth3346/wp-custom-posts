@@ -1,10 +1,17 @@
 <?php
-
-namespace Framework\CustomPosts;
+namespace WpCustomPosts;
 
 class Cpt
 {
-    use \Framework\Traits\StringHelpers;
+    public function deslugify($str)
+    {
+        return ucwords(str_replace('_', ' ', $str));
+    }
+
+    public function slugify($str)
+    {
+        return str_replace('_', '-', $str);
+    }
 
     public function getDefaultSettings($singular_name, $plural_name)
     {

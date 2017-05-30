@@ -1,8 +1,5 @@
 <?php
-
-namespace Framework\CustomPosts;
-
-use \Framework\CustomPosts\CptForms;
+namespace WpCustomPosts;
 
 class CptMeta
 {

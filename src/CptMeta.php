@@ -21,11 +21,11 @@ class CptMeta
         return strip_tags($meta_value);
     }
 
-    private function registerMeta($fields)
+    private function registerMeta($field)
     {
-        foreach ($fields as $field) {
-            register_meta('post', $field, '[$this, sanitize_meta]', '__return_true');
-        }
+        // foreach ($fields as $field) {
+            register_meta('post', $field['id'], '[$this, sanitize_meta]', '__return_true');
+        // }
     }
 
     public function register($fields)
@@ -86,9 +86,13 @@ class CptMeta
 
             if ($type == 'textarea') {
                 $html .= $forms->createTextArea($field);
+            } else if ($type == 'select') {
+                $html .= $forms->createSelectField($field);
             } else {
                 $html .= $forms->createTextField($field);
             }
+
+            $html .= '<br><br>';
         }
 
         echo $html;
